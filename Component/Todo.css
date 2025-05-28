@@ -1,0 +1,178 @@
+/* Todo.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+}
+
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.child-div {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+}
+
+.child-div figure {
+  margin: 0;
+  text-align: center;
+}
+
+.child-div figcaption {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.addItems {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.addItems input[type="text"] {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.addItems input[type="text"]:focus {
+  border-color: #6c63ff;
+}
+
+.addItems .add-btn {
+  background-color: #6c63ff;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.addItems .add-btn:hover {
+  background-color: #5848c2;
+  transform: scale(1.1);
+}
+
+.showItems {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.eachItems {
+  background-color: #f1f1f1;
+  padding: 12px 18px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.eachItems:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.eachItems h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.eachItems .add-btn {
+  color: #e63946;
+  background: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s;
+}
+
+.eachItems .add-btn:hover {
+  color: #c1121f;
+  transform: scale(1.2);
+}
+
+
+
+.todo-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-btn .add-btn {
+  background: transparent;
+  color: #e74c3c;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s;
+}
+
+.todo-btn .add-btn:hover {
+  color: #c0392b;
+  transform: scale(1.2);
+}
+
+/* Button with effect04 style */
+.btn.effect04 {
+  border: none;
+  padding: 12px 30px;
+  background: #6c63ff;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.btn.effect04:hover {
+  background: black;
+}
+
+.btn.effect04 span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn.effect04::before {
+  content: attr(data-sm-link-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #4538a5;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 3;
+}
+
+.btn.effect04:hover::before {
+  transform: translateY(0%);
+}
+
